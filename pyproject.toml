@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "trip-planner-agent"
+version = "0.1.0"
+description = "A conversational AI agent that plans trips based on family size, duration, budget, and interests — powered by Groq LLMs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Awais Khan", github = "https://github.com/Awaiskhan1187" }
+]
+
+keywords = ["ai", "agent", "travel", "llm", "groq", "trip-planner", "chatbot"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "openai>=1.30.0,<2.0.0",
+  "python-dotenv>=1.0.0,<2.0.0",
+]
+
+[project.scripts]
+trip-planner = "agent:main"
+
+[project.urls]
+Homepage = "https://github.com/Awaiskhan1187/Planning-a-trip-to-paris"
+Repository = "https://github.com/Awaiskhan1187/Planning-a-trip-to-paris"
+Issues = "https://github.com/Awaiskhan1187/Planning-a-trip-to-paris/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]

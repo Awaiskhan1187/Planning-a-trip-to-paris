@@ -1,0 +1,5 @@
+# Trip Planner AI Agent — Python dependencies
+# Install with: pip install -r requirements.txt
+
+openai>=1.30.0,<2.0.0        # OpenAI-compatible SDK (used with Groq endpoint)
+python-dotenv>=1.0.0,<2.0.0  # Loads GROQ_API key from .env file
